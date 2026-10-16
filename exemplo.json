@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "start": "n_a1b2",
+  "characters": [
+    {
+      "id": "player",
+      "name": "Player",
+      "isPlayer": true,
+      "color": "#3fae8f",
+      "avatar": ""
+    },
+    {
+      "id": "bot",
+      "name": "Bot",
+      "isPlayer": false,
+      "color": "#e8577a",
+      "avatar": ""
+    },
+    {
+      "id": "npc",
+      "name": "NPC",
+      "isPlayer": false,
+      "color": "#5aa9e6",
+      "avatar": ""
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_a1b2",
+      "type": "fala",
+      "character": "bot",
+      "kind": "pergunta",
+      "text": "Olá! Gostas de jogos de aventura?",
+      "events": [
+        "bot_pergunta"
+      ],
+      "next": "n_c3d4",
+      "options": [],
+      "x": 60,
+      "y": 160,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_c3d4",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Sim gosto!",
+          "to": "n_e5f6",
+          "events": []
+        },
+        {
+          "text": "Nem por isso ...",
+          "to": "n_g7h8",
+          "events": []
+        }
+      ],
+      "x": 347,
+      "y": 160,
+      "w": 237,
+      "h": 111
+    },
+    {
+      "id": "n_e5f6",
+      "type": "fala",
+      "character": "bot",
+      "kind": "pergunta",
+      "text": "Então vais adorar o que o NPC anda a preparar!",
+      "events": [],
+      "next": "n_i9j0",
+      "options": [],
+      "x": 690,
+      "y": 30,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_g7h8",
+      "type": "fala",
+      "character": "npc",
+      "kind": "afirmacao",
+      "text": "Pois, talvez ainda não tenhas encontrado o jogo certo.",
+      "events": [],
+      "next": "n_i9j0",
+      "options": [],
+      "x": 677,
+      "y": 300,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_i9j0",
+      "type": "fala",
+      "character": "npc",
+      "kind": "pergunta",
+      "text": "Queres experimentar o nosso protótipo?",
+      "events": [
+        "fim_conversa"
+      ],
+      "next": "n_kcuzd",
+      "options": [],
+      "x": 1020,
+      "y": 160,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_kcuzd",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Ok pode ser!",
+          "to": "n_ydhlm",
+          "events": []
+        },
+        {
+          "text": "Não me apetece.",
+          "to": "n_entb6",
+          "events": []
+        }
+      ],
+      "x": 1337,
+      "y": 162,
+      "w": 180,
+      "h": 111
+    },
+    {
+      "id": "n_ydhlm",
+      "type": "fala",
+      "character": "npc",
+      "kind": "afirmacao",
+      "text": "Boa! Vamos a isso!!",
+      "events": [
+        "fim_conversa",
+        "som",
+        "imagem"
+      ],
+      "next": "",
+      "options": [],
+      "x": 1653,
+      "y": 107,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_entb6",
+      "type": "fala",
+      "character": "bot",
+      "kind": "afirmacao",
+      "text": "Ok fica para outro dia!!",
+      "events": [
+        "som",
+        "imagem",
+        "fim_conversa"
+      ],
+      "next": "",
+      "options": [],
+      "x": 1655,
+      "y": 268,
+      "w": 0,
+      "h": 0
+    }
+  ]
+}
