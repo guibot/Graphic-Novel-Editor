@@ -4,7 +4,7 @@
 
 A visual editor for branching dialogue (graphic novels / chat-style stories). You build the story as a graph of draggable nodes in the browser and export it as JSON, ready to be read by a game engine (designed for Unity's `JsonUtility`).
 
-- **Single file**: `GraphicNovel_Creator.html`. All CSS and JS are inline, no dependencies, no build step, no network access.
+- **Single file**: `index.html`. All CSS and JS are inline, no dependencies, no build step, no network access.
 - Works opened directly from disk (`file://`) in Chrome, and on any static host (e.g. GitHub Pages).
 - The UI is in European Portuguese but you can easily translate to English with the browser translator.
 
