@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "start": "n_f1",
+  "characters": [
+    {
+      "id": "player",
+      "name": "Tu",
+      "isPlayer": true,
+      "color": "#3fae8f",
+      "avatar": ""
+    },
+    {
+      "id": "astrid",
+      "name": "Astrid",
+      "isPlayer": false,
+      "color": "#e8577a",
+      "avatar": ""
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_f1",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Ei, tu! A escola só abre daqui a uma hora. Quem és tu?",
+      "events": [
+        "fundo:escola_dia",
+        "mostrar:astrid:esq:neutra"
+      ],
+      "next": "n_r1",
+      "options": [],
+      "x": 60,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_r1",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Sou o novo aluno.",
+          "to": "n_f2",
+          "events": []
+        },
+        {
+          "text": "Isso não é da tua conta.",
+          "to": "n_f2",
+          "events": []
+        }
+      ],
+      "x": 360,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_f2",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Está bem. Eu sou a Astrid, da associação de estudantes, e sou sempre a primeira a chegar. E tu, porque estás aqui tão cedo?",
+      "events": [],
+      "next": "n_r2",
+      "options": [],
+      "x": 660,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_r2",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Não consegui dormir.",
+          "to": "n_f3",
+          "events": []
+        },
+        {
+          "text": "Queria conhecer a escola sozinho.",
+          "to": "n_f3",
+          "events": []
+        }
+      ],
+      "x": 960,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_f3",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Compreendo. A primeira semana é sempre estranha. Já viste o teu horário?",
+      "events": [
+        "expr:astrid:sorri"
+      ],
+      "next": "n_r3",
+      "options": [],
+      "x": 1260,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_r3",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Ainda não.",
+          "to": "n_f4",
+          "events": []
+        },
+        {
+          "text": "Já, mas não percebi nada.",
+          "to": "n_f4",
+          "events": []
+        }
+      ],
+      "x": 1560,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_f4",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Eu ajudo-te com isso depois. Mas antes, diz-me: já ouviste falar do caderno que desapareceu da biblioteca?",
+      "events": [
+        "expr:astrid:neutra"
+      ],
+      "next": "n_r4",
+      "options": [],
+      "x": 1860,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_r4",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Não, nunca ouvi falar.",
+          "to": "n_f5",
+          "events": []
+        },
+        {
+          "text": "Ouvi alguma coisa pelos corredores.",
+          "to": "n_f5",
+          "events": []
+        }
+      ],
+      "x": 2160,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_f5",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Estranho, ninguém fala de outra coisa. Vou ser direta: foste tu que o levaste?",
+      "events": [
+        "expr:astrid:desconfiada"
+      ],
+      "next": "n_r5",
+      "options": [],
+      "x": 2460,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_r5",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Fui eu, mas posso explicar.",
+          "to": "n_fa1",
+          "events": []
+        },
+        {
+          "text": "Claro que não! Nem sei onde fica a biblioteca.",
+          "to": "n_fb1",
+          "events": []
+        }
+      ],
+      "x": 2760,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_fa1",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "A sério? Pensei que ias negar. Porque é que o levaste?",
+      "events": [
+        "expr:astrid:surpresa"
+      ],
+      "next": "n_ra1",
+      "options": [],
+      "x": 3060,
+      "y": 40,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_ra1",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Era do meu irmão, que estudou aqui.",
+          "to": "n_fa2",
+          "events": []
+        },
+        {
+          "text": "Achei que ninguém ia dar por isso.",
+          "to": "n_fa2",
+          "events": []
+        }
+      ],
+      "x": 3360,
+      "y": 40,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_fa2",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Percebo. Não vou denunciar-te, mas tens de o devolver. Onde o deixaste?",
+      "events": [
+        "expr:astrid:neutra"
+      ],
+      "next": "n_ra2",
+      "options": [],
+      "x": 3660,
+      "y": 40,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_ra2",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Escondi-o numa caixa, na biblioteca.",
+          "to": "n_c1",
+          "events": []
+        },
+        {
+          "text": "Deixei-o na biblioteca, mas já não sei onde.",
+          "to": "n_c1",
+          "events": []
+        }
+      ],
+      "x": 3960,
+      "y": 40,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_fb1",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Não sabes onde fica? Está mesmo atrás de ti e ocupa metade do edifício.",
+      "events": [
+        "expr:astrid:desconfiada"
+      ],
+      "next": "n_rb1",
+      "options": [],
+      "x": 3060,
+      "y": 440,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_rb1",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Ah, pois. Distraí-me.",
+          "to": "n_fb2",
+          "events": []
+        },
+        {
+          "text": "Pensava que era o ginásio.",
+          "to": "n_fb2",
+          "events": []
+        }
+      ],
+      "x": 3360,
+      "y": 440,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_fb2",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Não sei se acredito em ti. Mas dou-te uma hipótese: ajuda-me a procurar o caderno e prova que és inocente.",
+      "events": [],
+      "next": "n_rb2",
+      "options": [],
+      "x": 3660,
+      "y": 440,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_rb2",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Combinado, vamos procurar.",
+          "to": "n_c1",
+          "events": []
+        },
+        {
+          "text": "Está bem, mas só por uns minutos.",
+          "to": "n_c1",
+          "events": []
+        }
+      ],
+      "x": 3960,
+      "y": 440,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_c1",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Chegámos. Dizem que o caderno estava na última prateleira. Consegues ver alguma coisa estranha?",
+      "events": [
+        "fundo:biblioteca",
+        "mostrar:astrid:esq:neutra"
+      ],
+      "next": "n_rc1",
+      "options": [],
+      "x": 4260,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_rc1",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Há uma prateleira com pó fresco.",
+          "to": "n_c2",
+          "events": []
+        },
+        {
+          "text": "Está tudo normal para mim.",
+          "to": "n_c2",
+          "events": []
+        }
+      ],
+      "x": 4560,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_c2",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Hum. Há uma caixa no chão, debaixo da prateleira. Abrimos?",
+      "events": [],
+      "next": "n_rc2",
+      "options": [],
+      "x": 4860,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_rc2",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Abre tu, eu fico de vigia.",
+          "to": "n_c3",
+          "events": []
+        },
+        {
+          "text": "Vamos abrir juntos.",
+          "to": "n_c3",
+          "events": []
+        }
+      ],
+      "x": 5160,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_c3",
+      "type": "fala",
+      "character": "astrid",
+      "kind": "pergunta",
+      "text": "Lá dentro está o caderno! Vamos entregá-lo à bibliotecária, juntos?",
+      "events": [
+        "expr:astrid:sorri"
+      ],
+      "next": "n_rc3",
+      "options": [],
+      "x": 5460,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "id": "n_rc3",
+      "type": "resposta",
+      "character": "player",
+      "kind": "",
+      "text": "",
+      "events": [],
+      "next": "",
+      "options": [
+        {
+          "text": "Vamos.",
+          "to": "",
+          "events": []
+        },
+        {
+          "text": "Sim, mas fica entre nós o resto.",
+          "to": "",
+          "events": []
+        }
+      ],
+      "x": 5760,
+      "y": 240,
+      "w": 0,
+      "h": 0
+    }
+  ]
+}
